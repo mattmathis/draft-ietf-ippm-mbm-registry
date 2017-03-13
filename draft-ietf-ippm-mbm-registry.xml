@@ -262,7 +262,7 @@
             </list></t>
 
           <t>Other measurement parameters:<list style="symbols">
-              <t>Tmax: a loss threshold waiting time @@@@@@Should this be
+              <t>Tmax: a loss threshold waiting time @@@@ Should this be
               linked to TCP RTO, or target_RTT plus a factor ??? <list
                   style="symbols">
                   <t>3.0, expressed in units of seconds, as a positive value
@@ -302,49 +302,61 @@
           <t>The stream generation parameters are described in Section 3 of
           <xref target="I-D.ietf-ippm-model-based-metrics"/>. They are
           dependent on the target parameters described in the Run-time
-          parameters section below.</t>
+          parameters section below.  They are written here with underscores
+	  because they are used in formulas in this note.</t>
 
-          <t>@@@@ Matt: These are listed as Terms (no underscores) in the
-          draft, but they are Parameters for the Stream Generation and we have
-          to use underscores here (so we should revise the draft, IMO).</t>
+          <t>@@@@ I strongly suggest decimal64 fraction digits = 9 or 12
+	  (i.e nanoseconds or picoseconds).  I point out that the average
+	  headway for min sized packets on 100Gb/s is already down to 5.1 uS.
+	  In either case for decimal64 the max headway is way longer than
+	  ever needed (decades or months).  --MM--
+	  (@@@@ BTW I think your fraction digits are off --MM--).
+	  </t>
 
-          <t>@@@@ Matt: We should agree on the various time resolutions
-          specified below.</t>
+	  <t>@@@@ This section has a general problem that it need to better prescribe
+	    generic concepts (headway, sizes, rates) and then define multiple distinct
+	    parameters needed to properly specify each pattern.</t>
 
           <t><list style="hanging">
               <t hangText="packet_headway">Time interval between packets,
               specified from the start of one to the start of the next, as a
-              positive value of type decimal64 with fraction digits = 8 (see
-              section 9.3 of <xref target="RFC6020"/>) with resolution of
-              0.0000001 seconds (0.0001 ms).</t>
+              positive value of type decimal64 with fraction digits = 9 seconds,
+	      for a resolution of 1 nanosecond.   (see
+              section 9.3 of <xref target="RFC6020"/>).
+	      @@@@ We need a convention for "back to back" independent of clock accuracy.--MM--</t>
 
               <t hangText="burst_headway">Time interval between bursts,
               specified from the start of the first packet one burst to the
               start of the first packet of the next burst, specified as a
-              positive value of type decimal64 with fraction digits = 5 (see
-              section 9.3 of <xref target="RFC6020"/>) with resolution of
-              0.0001 seconds (0.1 ms).</t>
+              positive value of type decimal64 with fraction digits = 9 seconds,
+	      for a resolution of 1 nanosecond.   (see
+              section 9.3 of <xref target="RFC6020"/>).</t>
 
               <t hangText="paced_single_packets">Send individual packets at
-              the specified rate or packet headway, specified as a positive
-              value of type decimal64 with fraction digits = 5 (see section
-              9.3 of <xref target="RFC6020"/>) with resolution of 0.0001
-              seconds (0.1 ms).</t>
+              the specified packet headway, specified as a
+              positive value of type decimal64 with fraction digits = 9 seconds,
+	      for a resolution of 1 nanosecond. (see
+              section 9.3 of <xref target="RFC6020"/>).
+	      @@@@ NB: I dropped rate.--MM--</t>
 
               <t hangText="paced_bursts">Send bursts on a timer. Specify any 3
               of: average data rate, packet size, burst size (number of
-              packets) and burst headway (burst start to start), specified as
-              a positive value of type decimal64 with fraction digits = 5 (see
-              section 9.3 of <xref target="RFC6020"/>) with resolution of
-              0.0001 seconds (0.1 ms).</t>
+              packets) and burst headway (burst start to start), specified as a
+              positive value of type decimal64 with fraction digits = 9 seconds,
+	      for a resolution of 1 nanosecond. (see
+              section 9.3 of <xref target="RFC6020"/>).</t>
 
-              <t hangText="slowstart_rate">Mimic TCP slowstart by sending 4
-              packet paced bursts at an average data rate equal to twice the
+              <t hangText="slowstart_rate">The average data rate necessary to
+	      mimic TCP slowstart by sending 4 packet paced bursts to 
+	      mimic a two level burst pattern as
+	      described in Section 6.1 of  <xref
+              target="I-D.ietf-ippm-model-based-metrics"/>.
+	      This rate should be chosen to be twice the
               implied bottleneck IP capacity (but not more than the sender
-              interface rate), specified as a value of type uint16 (see
-              section 9.2 of <xref target="RFC6020"/>) in units of @@@@ bursts
-              per second @@@@ or IP-layer bytes per second (needs uint32)
-              @@@@.</t>
+              interface rate).
+	      The slowstart_rate is specified as a value of type uint32 (see
+              section 9.2 of <xref target="RFC6020"/>) in units of
+              IP-layer bytes per second.</t>
 
               <t hangText="slowstart_burst">Mimic one round of TCP slowstart
               by sending a specified number of packets in a two level burst
@@ -358,7 +370,10 @@
               once per target_RTT. All Slowstart bursts are the same size in
               measurements (different from normal TCP sending behavior),
               specified as a value of type boolean (see section 9.5 of <xref
-              target="RFC6020"/>).</t>
+              target="RFC6020"/>).
+	      @@@@@ I would change this to [slowestart] burst headway, 
+	      nominally an interval mimicking the RTT and long enough to permit
+	      all of the queues to drain between slowstart bursts.</t>
             </list></t>
         </section>
 
