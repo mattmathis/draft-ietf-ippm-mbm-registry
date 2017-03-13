@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd">
+<?rfc toc="yes"?>
+<?rfc tocompact="yes"?>
+<?rfc tocdepth="3"?>
+<?rfc tocindent="yes"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes"?>
+<?rfc comments="yes"?>
+<?rfc inline="yes"?>
+<?rfc compact="yes"?>
+<?rfc subcompact="no"?>
+<rfc category="std" docName="draft-morton-ippm-mbm-registry-01"
+     ipr="trust200902">
+  <front>
+    <title abbrev="Initial Registry Part 2">Initial Performance Metric
+    Registry Entries Part 2: MBM</title>
+
+    <author fullname="Al Morton" initials="A." surname="Morton">
+      <organization>AT&amp;T Labs</organization>
+
+      <address>
+        <postal>
+          <street>200 Laurel Avenue South</street>
+
+          <city>Middletown,</city>
+
+          <region>NJ</region>
+
+          <code>07748</code>
+
+          <country>USA</country>
+        </postal>
+
+        <phone>+1 732 420 1571</phone>
+
+        <facsimile>+1 732 368 1192</facsimile>
+
+        <email>acmorton@att.com</email>
+
+        <uri>http://home.comcast.net/~acmacm/</uri>
+      </address>
+    </author>
+
+    <author fullname="Matt Mathis" initials="M." surname="Mathis">
+      <organization>Google</organization>
+
+      <address>
+        <postal>
+          <street/>
+
+          <city/>
+
+          <region/>
+
+          <code/>
+
+          <country/>
+        </postal>
+
+        <phone/>
+
+        <email>mattmathis@google.com</email>
+
+        <uri/>
+      </address>
+    </author>
+
+    <date day="13" month="March" year="2017"/>
+
+    <abstract>
+      <t>This memo defines a Registry Entry for the Performance Metrics
+      Registry based on Model Based Metrics. This entry will be combined with
+      the "initial-registry" draft after review.</t>
+
+      <t>The string "@@@@" identifies some areas for further discussion to
+      finalize the text.</t>
+    </abstract>
+
+    <note title="Requirements Language">
+      <t>The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+      "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+      document are to be interpreted as described in <xref
+      target="RFC2119">RFC 2119</xref>.</t>
+
+      <t/>
+    </note>
+  </front>
+
+  <middle>
+    <section title="Introduction">
+      <t>Note: Efforts to synchronize structure and terminology with <xref
+      target="I-D.ietf-ippm-metric-registry"/> will likely be incomplete until
+      both drafts are stable.</t>
+
+      <t>This memo proposes a (set of) entry(ies) for the Performance Metric
+      Registry, based on Model-Based Metrics (MBM). It uses terms and
+      definitions from the IPPM literature, primarily <xref
+      target="RFC2330"/>.</t>
+    </section>
+
+    <section title="Scope">
+      <t>This document defines one of the initial set of Performance Metrics
+      Registry entries, for which IETF approval (following development in the
+      IP Performance Metrics (IPPM) Working Group) will satisfy the
+      requirement for Expert Review. Note that all are Active Performance
+      Metrics, which are based on RFCs prepared in the IPPM working group of
+      the IETF, according to their framework <xref target="RFC2330"/> and its
+      updates.</t>
+    </section>
+
+    <section title="MBM Registry Entry">
+      <t>This section gives an initial registry entry for a Model-Based Metric
+      (MBM) Sustained Burst Metric.</t>
+
+      <section title="Summary">
+        <t>This category includes multiple indexes to the registry entries,
+        the element ID and metric name.</t>
+
+        <section title="ID (Identifier)">
+          <t>&lt;insert numeric identifier, an integer&gt;</t>
+        </section>
+
+        <section title="Name">
+          <t>&lt;insert name according to metric naming convention&gt;</t>
+
+          <t>OWMBM_Active_IP-TCP-SustainedBurst_RFCXXXXsecY_Enumerated_PFI</t>
+        </section>
+
+        <section title="URIs">
+          <t>URI: Prefix urn:ietf:metrics:perf:&lt;name&gt;</t>
+
+          <t>URL: http:\\www.iana.org\ ... &lt;name&gt;</t>
+        </section>
+
+        <section title="Description">
+          <t>TBD.</t>
+        </section>
+
+        <section title="Reference">
+          <t>&lt;reference to the RFC of spec where the registry entry is
+          defined&gt;</t>
+
+          <t>RFCXXXXsecY</t>
+        </section>
+
+        <section title="Change Controller">
+          <t>&lt;org or person &gt;</t>
+
+          <t>IETF</t>
+        </section>
+
+        <section title="Version (of Registry Format)">
+          <t>&lt;currently 1.0&gt;</t>
+
+          <t>1.0</t>
+        </section>
+      </section>
+
+      <section title="Metric Definition">
+        <t>This category includes columns to prompt the entry of all necessary
+        details related to the metric definition, including the RFC reference
+        and values of input factors, called fixed parameters.</t>
+
+        <section title="Reference Definition">
+          <t>&lt;Full bibliographic reference to an immutable doc.&gt;</t>
+
+          <t>&lt;specific section reference and additional clarifications, if
+          needed&gt;</t>
+
+          <t>Mathis, M. and A. Morton, "Model Based Metrics for Bulk Transport
+          Capacity", draft-ietf-ippm-model-based- metrics-10 (work in
+          progress), February 2017.</t>
+
+          <t>The primary metrics of measurement are round-trip delay and
+          one-way loss, measured under the conditions described in Section
+          8.5.1 of <xref target="I-D.ietf-ippm-model-based-metrics"/>.</t>
+
+          <t>For loss:</t>
+
+          <t>Almes, G., Kalidini, S., Zekauskas, M., and A. Morton, Ed., "A
+          One-Way Loss Metric for IP Performance Metrics (IPPM)", RFC 7680,
+          DOI 10.17487/RFC7680, January 2016,
+          &lt;http://www.rfc-editor.org/info/rfc7680&gt;. </t>
+
+          <t>Section 2.4 of <xref target="RFC7680"/> provides the reference
+          definition of the singleton (single value) one-way loss metric.
+          Section 3.4 of <xref target="RFC7680"/> provides the reference
+          definition expanded to cover a multi-singleton sample. Note that
+          terms such as singleton and sample are defined in Section 11 of
+          <xref target="RFC2330"/>.</t>
+
+          <t>For round-trip delay:</t>
+
+          <t>Almes, G., Kalidindi, S., and M. Zekauskas, "A One-way Packet
+          Loss Metric for IPPM", RFC 2680, September 1999.</t>
+
+          <t><xref target="RFC2681"/></t>
+
+          <t>Almes, G., Kalidindi, S., Zekauskas, M., and A. Morton, Ed., "A
+          One-Way Delay Metric for IP Performance Metrics (IPPM)", STD 81, RFC
+          7679, DOI 10.17487/RFC7679, January 2016,
+          &lt;http://www.rfc-editor.org/info/rfc7679&gt;.</t>
+
+          <t><xref target="RFC7679"/></t>
+
+          <t>&lt;specific section reference and additional clarifications, if
+          needed&gt;</t>
+
+          <t>Section 2.4 of <xref target="RFC2681"/> provides the reference
+          definition of the singleton (single value) Round-trip delay metric.
+          Section 3.4 of <xref target="RFC2681"/> provides the reference
+          definition expanded to cover a multi-singleton sample. Note that
+          terms such as singleton and sample are defined in Section 11 of
+          <xref target="RFC2330"/>.</t>
+
+          <t>Note that although the definition of "Round-trip-Delay between
+          Src and Dst" is directionally ambiguous in the text, this metric
+          tightens the definition further to recognize that the host in the
+          "Src" role will send the first packet to "Dst", and ultimately
+          receive the corresponding return packet from "Dst" (when neither are
+          lost).</t>
+
+          <t>Finally, note that the variable "dT" is used in <xref
+          target="RFC2681"/> to refer to the value of Round-trip delay in
+          metric definitions and methods. The variable "dT" has been re-used
+          in other IPPM literature to refer to different quantities, and
+          cannot be used as a global variable name here.</t>
+        </section>
+
+        <section title="Fixed Parameters">
+          <t>&lt;list and specify Fixed Parameters, input factors that must be
+          determined and embedded in the measurement system for use when
+          needed&gt;</t>
+
+          <t>Type-P as defined in Section 13 of <xref target="RFC2330"/>:
+          <list style="symbols">
+              <t>IPv4 header values: <list style="symbols">
+                  <t>DSCP: set to 0</t>
+
+                  <t>TTL: set to 255</t>
+
+                  <t>Protocol: Set to 6 (TCP)</t>
+                </list></t>
+
+              <t>IPv6 header values:<list style="symbols">
+                  <t>DSCP: set to 0</t>
+
+                  <t>Hop Count: set to 255</t>
+
+                  <t>Protocol: Set to 6 (TCP)</t>
+                </list></t>
+
+              <t>TCP header values: <list style="symbols">
+                  <t>Checksum: the checksum MUST be calculated and included in
+                  the header</t>
+                </list></t>
+
+              <t>TCP Payload <list style="symbols">
+                  <t>see target_MTU in Run-time parameters.</t>
+                </list></t>
+            </list></t>
+
+          <t>Other measurement parameters:<list style="symbols">
+              <t>Tmax: a loss threshold waiting time @@@@@@Should this be
+              linked to TCP RTO, or target_RTT plus a factor ??? <list
+                  style="symbols">
+                  <t>3.0, expressed in units of seconds, as a positive value
+                  of type decimal64 with fraction digits = 5 (see section 9.3
+                  of <xref target="RFC6020"/>) and with resolution of 0.0001
+                  seconds (0.1 ms), with lossless conversion to/from the
+                  32-bit NTP timestamp as per section 6 of <xref
+                  target="RFC5905"/>.</t>
+                </list></t>
+            </list></t>
+        </section>
+      </section>
+
+      <section title="Method of Measurement">
+        <t>This category includes columns for references to relevant sections
+        of the RFC(s) and any supplemental information needed to ensure an
+        unambiguous methods for implementations.</t>
+
+        <section title="Reference Method">
+          <t>&lt;for metric, insert relevant section references and
+          supplemental info&gt;</t>
+
+          <t>The method of measurement is described in Section 8.5.1 of <xref
+          target="I-D.ietf-ippm-model-based-metrics"/>.</t>
+
+          <t>The example described in Section 9 of <xref
+          target="I-D.ietf-ippm-model-based-metrics"/> may also help.</t>
+
+          <t>@@@@&lt;more could be said here about loss and RTT methods&gt;
+          </t>
+        </section>
+
+        <section title="Packet Stream Generation">
+          <t>&lt;list of generation parameters and section/spec references if
+          needed&gt;</t>
+
+          <t>The stream generation parameters are described in Section 3 of
+          <xref target="I-D.ietf-ippm-model-based-metrics"/>. They are
+          dependent on the target parameters described in the Run-time
+          parameters section below.</t>
+
+          <t>@@@@ Matt: These are listed as Terms (no underscores) in the
+          draft, but they are Parameters for the Stream Generation and we have
+          to use underscores here (so we should revise the draft, IMO).</t>
+
+          <t>@@@@ Matt: We should agree on the various time resolutions
+          specified below.</t>
+
+          <t><list style="hanging">
+              <t hangText="packet_headway">Time interval between packets,
+              specified from the start of one to the start of the next, as a
+              positive value of type decimal64 with fraction digits = 8 (see
+              section 9.3 of <xref target="RFC6020"/>) with resolution of
+              0.0000001 seconds (0.0001 ms).</t>
+
+              <t hangText="burst_headway">Time interval between bursts,
+              specified from the start of the first packet one burst to the
+              start of the first packet of the next burst, specified as a
+              positive value of type decimal64 with fraction digits = 5 (see
+              section 9.3 of <xref target="RFC6020"/>) with resolution of
+              0.0001 seconds (0.1 ms).</t>
+
+              <t hangText="paced_single_packets">Send individual packets at
+              the specified rate or packet headway, specified as a positive
+              value of type decimal64 with fraction digits = 5 (see section
+              9.3 of <xref target="RFC6020"/>) with resolution of 0.0001
+              seconds (0.1 ms).</t>
+
+              <t hangText="paced_bursts">Send bursts on a timer. Specify any 3
+              of: average data rate, packet size, burst size (number of
+              packets) and burst headway (burst start to start), specified as
+              a positive value of type decimal64 with fraction digits = 5 (see
+              section 9.3 of <xref target="RFC6020"/>) with resolution of
+              0.0001 seconds (0.1 ms).</t>
+
+              <t hangText="slowstart_rate">Mimic TCP slowstart by sending 4
+              packet paced bursts at an average data rate equal to twice the
+              implied bottleneck IP capacity (but not more than the sender
+              interface rate), specified as a value of type uint16 (see
+              section 9.2 of <xref target="RFC6020"/>) in units of @@@@ bursts
+              per second @@@@ or IP-layer bytes per second (needs uint32)
+              @@@@.</t>
+
+              <t hangText="slowstart_burst">Mimic one round of TCP slowstart
+              by sending a specified number of packets in a two level burst
+              pattern that resembles slowstart, specified as a number of type
+              uint16 (see section 9.2 of <xref target="RFC6020"/>) in units of
+              packets, and a rate specified as a value of type uint16 (see
+              section 9.2 of <xref target="RFC6020"/>) in units of packets per
+              second.</t>
+
+              <t hangText="repeated_slowstart_burst">Repeat Slowstart bursts
+              once per target_RTT. All Slowstart bursts are the same size in
+              measurements (different from normal TCP sending behavior),
+              specified as a value of type boolean (see section 9.5 of <xref
+              target="RFC6020"/>).</t>
+            </list></t>
+        </section>
+
+        <section title="Traffic Filtering (observation) Details">
+          <t>&lt;insert the measured results based on a filtered version of
+          the packets observed, and this section provides the filter details
+          (when present), and section reference&gt;.</t>
+
+          <t>NA</t>
+        </section>
+
+        <section title="Sampling Distribution">
+          <t>&lt;insert time distribution details, or how this is diff from
+          the filter&gt;</t>
+
+          <t>NA</t>
+        </section>
+
+        <section title="Run-time Parameters and Data Format">
+          <t>&lt;list of run-time parameters, and any reference(s)&gt;.</t>
+
+          <t>The following parameters are described in <xref
+          target="RFC2330"/></t>
+
+          <t><list style="hanging">
+              <t hangText="Src">the IP address of the host in the Src Role
+              (format ipv4-address-no-zone value for IPv4, or
+              ipv6-address-no-zone value for IPv6, see Section 4 of <xref
+              target="RFC6991"/>)</t>
+
+              <t hangText="Dst">the IP address of the host in the Dst Role
+              (format ipv4-address-no-zone value for IPv4, or
+              ipv6-address-no-zone value for IPv6, see section 4 of <xref
+              target="RFC6991"/>)</t>
+
+              <t hangText="T0">a time, the start of a measurement interval,
+              (format "date-and-time" as specified in Section 5.6 of <xref
+              target="RFC3339"/>, see also Section 3 of <xref
+              target="RFC6991"/>). The UTC Time Zone is required by Section
+              6.1 of <xref target="RFC2330"/>. When T0 is "all-zeros", a start
+              time is unspecified and Tf is to be interpreted as the Duration
+              of the measurement interval. The start time is controlled
+              through other means.</t>
+
+              <t hangText="Tf">a time, the end of a measurement interval,
+              (format "date-and-time" as specified in Section 5.6 of <xref
+              target="RFC3339"/>, see also Section 3 of <xref
+              target="RFC6991"/>). The UTC Time Zone is required by Section
+              6.1 of <xref target="RFC2330"/>. When T0 is "all-zeros", a end
+              time date is ignored and Tf is interpreted as the Duration of
+              the measurement interval.</t>
+            </list></t>
+
+          <t>The following MBM-specific parameters are as defined in Section 3
+          of <xref target="I-D.ietf-ippm-model-based-metrics"/>, and
+          subsequent sections of the memo.</t>
+
+          <t><list style="hanging">
+              <t hangText="target_data_rate">The specified application data
+              rate required for an application's proper operation, specified
+              as a value of type uint32 (see section 9.2 of <xref
+              target="RFC6020"/>) in units of IP-layer bytes per second. </t>
+
+              <t hangText="target_RTT">The specified baseline (minimum) RTT of
+              the longest complete path over which the user expects to be able
+              meet the target performance, specified as a positive value of
+              type decimal64 with fraction digits = 5 (see section 9.3 of
+              <xref target="RFC6020"/>) with resolution of 0.0001 seconds (0.1
+              ms).</t>
+
+              <t hangText="target_MTU">The specified maximum MTU supported by
+              the complete path the over which the application expects to meet
+              the target performancespecified as a value of type uint16 (see
+              section 9.2 of <xref target="RFC6020"/>) in units of IP-layer
+              bytes.</t>
+
+              <t hangText="target_window_size">The average number of packets
+              in flight (the window size) needed to meet the Target Data Rate,
+              for the specified Target RTT, and MTU, specified as a value of
+              type uint32 (see section 9.2 of <xref target="RFC6020"/>) in
+              units of @@@@ packets @@@@ or IP-layer bytes @@@@@. It implies
+              the scale of the bursts that the network might experience.</t>
+
+              <t hangText="subpath_???">@@@@@ Do we need a subpath-specific
+              parameter? Such as subpath_RTT ???</t>
+
+              <t hangText="derating">The modeling framework permits some
+              latitude in relaxing or "derating" some test parameters as
+              described in Section 5.3 of <xref
+              target="I-D.ietf-ippm-model-based-metrics"/>, in exchange for a
+              more stringent TIDS validation procedures as described in
+              Section 10 of <xref
+              target="I-D.ietf-ippm-model-based-metrics"/>. The use of derated
+              parameters is specified as a value of type boolean (see section
+              9.5 of <xref target="RFC6020"/>).</t>
+
+              <t hangText="test_window">The smallest window sufficient to meet
+              or exceed the target_rate when operating with a pure self-clock
+              over a test path, specified as a value of type uint32 (see
+              section 9.2 of <xref target="RFC6020"/>) in units of @@@@
+              packets @@@@ or IP-layer bytes @@@@@.</t>
+
+              <t hangText=""/>
+            </list></t>
+
+          <t>The following MBM-specific parameters are as defined in Section
+          of <xref target="I-D.ietf-ippm-model-based-metrics">7.2</xref>:<list
+              style="hanging">
+              <t hangText="H0H1_ratio">The value of the multiplier on the Null
+              Hypothesis loss ratio used to calculate the Alternate Hypothesis
+              loss ratio, specified as a value of type uint8 (see section 9.2
+              of <xref target="RFC6020"/>) and unit-less.</t>
+
+              <t hangText="alpha_TI_err">Measurements support accepting H0
+              with the specified Type I error = alpha (= 0.05 for example),
+              specified as a positive value of type decimal64 with fraction
+              digits = 5 (see section 9.3 of <xref target="RFC6020"/>) with
+              resolution of 0.0001.</t>
+
+              <t hangText="beta_TII_err">Measurements support accepting H1
+              with the specified Type II error = beta (= 0.05 for example),
+              specified as a positive value of type decimal64 with fraction
+              digits = 5 (see section 9.3 of <xref target="RFC6020"/>) with
+              resolution of 0.0001.</t>
+            </list></t>
+
+          <t>Additional MBM-specific parameters may be calculated by the
+          measurement system itself, or they may be supplied as additional
+          Run-time parameters: @@@@ Candidates ????<list style="hanging">
+              <t/>
+            </list></t>
+
+          <t/>
+        </section>
+
+        <section title="Roles">
+          <t>&lt;lists the names of the different roles from the measurement
+          method&gt;</t>
+
+          <t><list style="hanging">
+              <t hangText="data_sender">Host sending data and receiving
+              ACKs.</t>
+
+              <t hangText="data_receiver">Host receiving data and sending
+              ACKs.</t>
+            </list>as described in Section 3 of <xref
+          target="I-D.ietf-ippm-model-based-metrics"/>.</t>
+        </section>
+      </section>
+
+      <section title="Output">
+        <t>This category specifies all details of the Output of measurements
+        using the metric.</t>
+
+        <section title="Type">
+          <t>&lt;insert name of the output type, raw or a selected summary
+          statistic&gt;</t>
+
+          <t>The primary output type is PFI, or Pass, Fail, Inconclusive,
+          referring to the conclusion of the test.</t>
+
+          <t>Two secondary output types MAY be reported to support the primary
+          output.</t>
+
+          <t>Loss Ratio: Singleton</t>
+
+          <t>Mean Round-trip Time: Singleton</t>
+        </section>
+
+        <section title="Reference Definition">
+          <t>&lt;pointer to section/spec where output type/format is
+          defined&gt;</t>
+
+          <t><list style="hanging">
+              <t hangText="T0">the start of a measurement interval, (format
+              "date-and-time" as specified in Section 5.6 of <xref
+              target="RFC3339"/>, see also Section 3 of <xref
+              target="RFC6991"/>). The UTC Time Zone is required by Section
+              6.1 of <xref target="RFC2330"/>.</t>
+
+              <t hangText="Tf">the end of a measurement interval, (format
+              "date-and-time" as specified in Section 5.6 of <xref
+              target="RFC3339"/>, see also Section 3 of <xref
+              target="RFC6991"/>). The UTC Time Zone is required by Section
+              6.1 of <xref target="RFC2330"/>.</t>
+
+              <t hangText="PFI">the summarized result of the measurement
+              representing the conclusion of whether or not the target values
+              have been achieved, (format enum as specified in section 9.6 of
+              <xref target="RFC6020"/>) with one of the following
+              enumerations: Pass, Fail, Inconclusive.</t>
+
+              <t hangText="Loss_Ratio">the result of lost (or ECN marked)
+              packet measurement from data_sender to data_receiver, expressed
+              as the ratio of lost packets to total packets sent from the data
+              sender (units). See section 4 of <xref target="RFC7680"/> for
+              details on this calculation.</t>
+
+              <t hangText="Mean_RTT">Mean Round-trip Time: The mean SHALL be
+              calculated using the conditional distribution of all packets
+              with a finite value of round-trip delay (undefined delays are
+              excluded), a single value as follows:<list style="symbols">
+                  <t>See section 4.1 of <xref target="RFC3393"/> for details
+                  on the conditional distribution to exclude undefined values
+                  of delay, and Section 5 of <xref target="RFC6703"/> for
+                  background on this analysis choice.</t>
+
+                  <t>See section 4.2.2 of <xref target="RFC6049"/> for details
+                  on calculating this statistic, and 4.2.3 of <xref
+                  target="RFC6049"/>.</t>
+
+                  <t>The time value of the result is expressed in units of
+                  seconds, as a positive value of type decimal64 with fraction
+                  digits = 9 (see section 9.3 of <xref target="RFC6020"/>)
+                  with resolution of 0.000000001 seconds (1.0 ns), and with
+                  lossless conversion to/from the 64-bit NTP timestamp as per
+                  section 6 of <xref target="RFC5905">RFC</xref>.</t>
+                </list></t>
+            </list></t>
+        </section>
+
+        <section title="Metric Units">
+          <t>&lt;insert units for the measured results, and the reference
+          specification&gt;.</t>
+
+          <t>PFI: Enumerated{Pass, Fail, Inconclusive}</t>
+
+          <t>Loss Ratio: RatioPercent</t>
+
+          <t>Mean Round-trip Time: Seconds</t>
+        </section>
+
+        <section title="Calibration">
+          <t>&lt;describe the error calibration, a way to indicate that the
+          results were collected in a calbration mode of operation, and a way
+          to report internal status metrics related to calibration, such as
+          time offset&gt;</t>
+
+          <t/>
+        </section>
+      </section>
+
+      <section title="Administrative items">
+        <t/>
+
+        <section title="Status">
+          <t>&lt;current or depricated&gt;</t>
+        </section>
+
+        <section title="Requestor">
+          <t>&lt;name of individual or Internet Draft, etc.&gt;</t>
+        </section>
+
+        <section title="Revision">
+          <t>1.0</t>
+        </section>
+
+        <section title="Revision Date">
+          <t>YYYY-MM-DD</t>
+        </section>
+      </section>
+
+      <section title="Comments and Remarks">
+        <t>Additional (Informational) details for this entry</t>
+      </section>
+    </section>
+
+    <section title="ver08 BLANK Registry Entry">
+      <t>This section gives an initial registry entry for ....</t>
+
+      <section title="Summary">
+        <t>This category includes multiple indexes to the registry entries,
+        the element ID and metric name.</t>
+
+        <section title="ID (Identifier)">
+          <t>&lt;insert numeric identifier, an integer&gt;</t>
+        </section>
+
+        <section title="Name">
+          <t>&lt;insert name according to metric naming convention&gt;</t>
+        </section>
+
+        <section title="URIs">
+          <t>URI: Prefix urn:ietf:params:performance:metric</t>
+
+          <t>URL:</t>
+        </section>
+
+        <section title="Description">
+          <t>TBD.</t>
+        </section>
+
+        <section title="Reference">
+          <t>&lt;reference to the RFC of spec where the registry entry is
+          defined&gt;</t>
+        </section>
+
+        <section title="Change Controller">
+          <t>&lt;org or person &gt;</t>
+        </section>
+
+        <section title="Version (of Registry Format)">
+          <t>&lt;currently 1.0&gt;</t>
+        </section>
+      </section>
+
+      <section title="Metric Definition">
+        <t>This category includes columns to prompt the entry of all necessary
+        details related to the metric definition, including the RFC reference
+        and values of input factors, called fixed parameters.</t>
+
+        <section title="Reference Definition">
+          <t>&lt;Full bibliographic reference to an immutable doc.&gt;</t>
+
+          <t>&lt;specific section reference and additional clarifications, if
+          needed&gt;</t>
+
+          <t/>
+        </section>
+
+        <section title="Fixed Parameters">
+          <t>&lt;list and specify Fixed Parameters, input factors that must be
+          determined and embedded in the measurement system for use when
+          needed&gt;</t>
+
+          <t/>
+        </section>
+      </section>
+
+      <section title="Method of Measurement">
+        <t>This category includes columns for references to relevant sections
+        of the RFC(s) and any supplemental information needed to ensure an
+        unambiguous methods for implementations.</t>
+
+        <section title="Reference Method">
+          <t>&lt;for metric, insert relevant section references and
+          supplemental info&gt;</t>
+        </section>
+
+        <section title="Packet Stream Generation">
+          <t>&lt;list of generation parameters and section/spec references if
+          needed&gt;</t>
+        </section>
+
+        <section title="Traffic Filtering (observation) Details">
+          <t>&lt;insert the measured results based on a filtered version of
+          the packets observed, and this section provides the filter details
+          (when present), and section reference&gt;.</t>
+        </section>
+
+        <section title="Sampling Distribution">
+          <t>&lt;insert time distribution details, or how this is diff from
+          the filter&gt;</t>
+        </section>
+
+        <section title="Run-time Parameters and Data Format">
+          <t>&lt;list of run-time parameters, and any reference(s)&gt;.</t>
+        </section>
+
+        <section title="Roles">
+          <t>&lt;lists the names of the different roles from the measurement
+          method&gt;</t>
+        </section>
+      </section>
+
+      <section title="Output">
+        <t>This category specifies all details of the Output of measurements
+        using the metric.</t>
+
+        <section title="Type">
+          <t>&lt;insert name of the output type, raw or a selected summary
+          statistic&gt;</t>
+        </section>
+
+        <section title="Reference Definition">
+          <t>&lt;pointer to section/spec where output type/format is
+          defined&gt;</t>
+        </section>
+
+        <section title="Metric Units">
+          <t>&lt;insert units for the measured results, and the reference
+          specification&gt;.</t>
+        </section>
+
+        <section title="Calibration">
+          <t>&lt;describe the error calibration, a way to indicate that the
+          results were collected in a calbration mode of operation, and a way
+          to report internal status metrics related to calibration, such as
+          time offset&gt;</t>
+
+          <t/>
+        </section>
+      </section>
+
+      <section title="Administrative items">
+        <t/>
+
+        <section title="Status">
+          <t>&lt;current or depricated&gt;</t>
+        </section>
+
+        <section title="Requestor">
+          <t>&lt;name of individual or Internet Draft, etc.&gt;</t>
+        </section>
+
+        <section title="Revision">
+          <t>1.0</t>
+        </section>
+
+        <section title="Revision Date">
+          <t>YYYY-MM-DD</t>
+        </section>
+      </section>
+
+      <section title="Comments and Remarks">
+        <t>Additional (Informational) details for this entry</t>
+      </section>
+    </section>
+
+    <section title="Security Considerations">
+      <t>These registry entries represent no known security implications for
+      Internet Security. Each referenced Metric contains a Security
+      Considerations section.</t>
+    </section>
+
+    <section anchor="IANA" title="IANA Considerations">
+      <!--     <t>Metrics previously defined in IETF were registered in the IANA IPPM
+      METRICS REGISTRY, however this process was discontinued when the
+      registry structure was found to be inadequate, and the registry was
+      declared Obsolete <xref target="RFC6248"/>.</t>
+
+      <t>The form of metric registration will finalized in this and other
+      memos, and IANA Action will be requested when the initial contents of
+      the registry are prepared.</t>-->
+
+      <t>IANA is requested to populate The Performance Metric Registry defined
+      in <xref target="I-D.ietf-ippm-metric-registry"/> with the values
+      defined above.</t>
+
+      <t>&lt;more is needed here&gt;</t>
+    </section>
+
+    <section title="Acknowledgements">
+      <t>The authors thank Brian Trammell for suggesting the term "Run-time
+      Parameters", which led to the distinction between run-time and fixed
+      parameters implemented in this memo, for identifying the IPFIX metric
+      with Flow Key as an example, and for many other productive suggestions.
+      Thanks to Peter Koch, who provided several useful suggestions for
+      disambiguating successive DNS Queries in the DNS Response time
+      metric.</t>
+
+      <t>The authors also acknowledge the constructive reviews and helpful
+      suggestions from Barbara Stark, Juergen Schoenwaelder, Tim Carey, and
+      participants in the LMAP working group.</t>
+    </section>
+  </middle>
+
+  <back>
+    <references title="Normative References">
+      <?rfc include="reference.RFC.1035"?>
+
+      <?rfc include="reference.RFC.2119"?>
+
+      <?rfc include="reference.RFC.2330"?>
+
+      <?rfc include="reference.RFC.2679"?>
+
+      <?rfc include='reference.RFC.2680'?>
+
+      <?rfc include='reference.RFC.2681'?>
+
+      <?rfc include='reference.RFC.3393'?>
+
+      <?rfc include='reference.RFC.3339'?>
+
+      <?rfc include='reference.RFC.3432'?>
+
+      <?rfc ?>
+
+      <?rfc include='reference.RFC.5905'?>
+
+      <?rfc include='reference.RFC.4737'?>
+
+      <?rfc include='reference.RFC.5357'?>
+
+      <?rfc include='reference.RFC.6020'?>
+
+      <?rfc include='reference.RFC.6049'?>
+
+      <?rfc include='reference.RFC.6673'?>
+
+      <?rfc include='reference.RFC.6991'?>
+
+      <?rfc include='reference.RFC.7679'?>
+
+      <?rfc include='reference.RFC.7680'?>
+
+      <?rfc include='reference.I-D.ietf-ippm-model-based-metrics'?>
+
+      <reference anchor="I-D.ietf-ippm-metric-registry">
+        <front>
+          <title>Registry for Performance Metrics</title>
+
+          <author fullname="Marcelo Bagnulo" initials="M." surname="Bagnulo">
+            <organization/>
+          </author>
+
+          <author fullname="Benoit Claise" initials="B." surname="Claise">
+            <organization/>
+          </author>
+
+          <author fullname="Phil Eardley" initials="P." surname="Eardley">
+            <organization/>
+          </author>
+
+          <author fullname="Al Morton" initials="A." surname="Morton">
+            <organization/>
+          </author>
+
+          <date year="2014"/>
+        </front>
+
+        <seriesInfo name="Internet Draft (work in progress)"
+                    value="draft-ietf-ippm-metric-registry"/>
+
+        <format type="TXT"/>
+      </reference>
+    </references>
+
+    <references title="Informative References">
+      <?rfc include='reference.RFC.1242'?>
+
+      <?rfc include='reference.RFC.3611'?>
+
+      <?rfc include='reference.RFC.4148'?>
+
+      <?rfc include='reference.RFC.4566'?>
+
+      <?rfc include='reference.RFC.5481'?>
+
+      <?rfc include='reference.RFC.5472'?>
+
+      <?rfc include='reference.RFC.5477'?>
+
+      <?rfc include='reference.RFC.6248'?>
+
+      <?rfc include='reference.RFC.6390'?>
+
+      <?rfc include='reference.RFC.6703'?>
+
+      <?rfc include='reference.RFC.6776'?>
+
+      <?rfc include='reference.RFC.6792'?>
+
+      <?rfc include='reference.RFC.7003'?>
+
+      <?rfc include='reference.RFC.7594'?>
+
+      <reference anchor="Brow00">
+        <front>
+          <title>Packet Matching for NeTraMet Distributions</title>
+
+          <author fullname="N.Brownlee" initials="N." surname="Brownlee">
+            <organization>&lt;http://www.caida.org/tools/measurement/
+            netramet/packetmatching/&gt;</organization>
+          </author>
+
+          <date month="March" year="2000"/>
+        </front>
+      </reference>
+    </references>
+  </back>
+</rfc>
