@@ -10,7 +10,7 @@
 <?rfc inline="yes"?>
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
-<rfc category="std" docName="draft-morton-ippm-mbm-registry-01"
+<rfc category="std" docName="draft-morton-ippm-mbm-registry-01bis"
      ipr="trust200902">
   <front>
     <title abbrev="Initial Registry Part 2">Initial Performance Metric
@@ -266,7 +266,7 @@
               linked to TCP RTO, or target_RTT plus a factor ??? <list
                   style="symbols">
                   <t>3.0, expressed in units of seconds, as a positive value
-                  of type decimal64 with fraction digits = 5 (see section 9.3
+                  of type decimal64 with fraction digits = 4 (see section 9.3
                   of <xref target="RFC6020"/>) and with resolution of 0.0001
                   seconds (0.1 ms), with lossless conversion to/from the
                   32-bit NTP timestamp as per section 6 of <xref
@@ -309,7 +309,7 @@
 	  (i.e nanoseconds or picoseconds).  I point out that the average
 	  headway for min sized packets on 100Gb/s is already down to 5.1 uS.
 	  In either case for decimal64 the max headway is way longer than
-	  ever needed (decades or months).  --MM--
+	  ever needed (decades or months). --MM--
 	  (@@@@ BTW I think your fraction digits are off --MM--).
 	  </t>
 
@@ -321,7 +321,7 @@
               <t hangText="packet_headway">Time interval between packets,
               specified from the start of one to the start of the next, as a
               positive value of type decimal64 with fraction digits = 9 seconds,
-	      for a resolution of 1 nanosecond.   (see
+	      for a resolution of 1 nanosecond. (see
               section 9.3 of <xref target="RFC6020"/>).
 	      @@@@ We need a convention for "back to back" independent of clock accuracy.--MM--</t>
 
@@ -440,7 +440,7 @@
               <t hangText="target_RTT">The specified baseline (minimum) RTT of
               the longest complete path over which the user expects to be able
               meet the target performance, specified as a positive value of
-              type decimal64 with fraction digits = 5 (see section 9.3 of
+              type decimal64 with fraction digits = 4 (see section 9.3 of
               <xref target="RFC6020"/>) with resolution of 0.0001 seconds (0.1
               ms).</t>
 
@@ -490,13 +490,13 @@
               <t hangText="alpha_TI_err">Measurements support accepting H0
               with the specified Type I error = alpha (= 0.05 for example),
               specified as a positive value of type decimal64 with fraction
-              digits = 5 (see section 9.3 of <xref target="RFC6020"/>) with
+              digits = 4 (see section 9.3 of <xref target="RFC6020"/>) with
               resolution of 0.0001.</t>
 
               <t hangText="beta_TII_err">Measurements support accepting H1
               with the specified Type II error = beta (= 0.05 for example),
               specified as a positive value of type decimal64 with fraction
-              digits = 5 (see section 9.3 of <xref target="RFC6020"/>) with
+              digits = 4 (see section 9.3 of <xref target="RFC6020"/>) with
               resolution of 0.0001.</t>
             </list></t>
 
