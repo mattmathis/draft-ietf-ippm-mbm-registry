@@ -2,6 +2,8 @@ NAME=draft-ietf-ippm-mbm-registry
 TARGETS=$(NAME).txt $(NAME).html
 TARGETS=$(NAME).html $(NAME).txt
 WEBNAME=draft-ietf-ippm-mbm-registry
+PRIOR=prior
+LIB="none"
 
 WEBDIR=${HOME}/www/drafts
 FORMATTED=`date`
